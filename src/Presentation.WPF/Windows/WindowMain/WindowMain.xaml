@@ -1,0 +1,123 @@
+<Window
+  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:v="clr-namespace:SJB.Science.PeriodicTable.View"
+  xmlns:m="clr-namespace:SJB.Science.PeriodicTable.Model"
+  xmlns:a="clr-namespace:SJB.Science.PeriodicTable"
+  x:Class="SJB.Science.PeriodicTable.WindowMain" 
+  WindowStartupLocation="CenterScreen"
+  ResizeMode="CanResizeWithGrip" Padding="2"
+  Height="768" MinHeight="288"
+  Width= "1024" MinWidth="576"
+  >
+	<Window.Background>
+		<LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1">
+			<GradientStop Offset="0.00" Color="Gray" />
+			<GradientStop Offset="1.00" Color="White" />
+		</LinearGradientBrush>
+	</Window.Background>
+	<Window.Resources>
+		<LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1" x:Key="AtomicForeground">
+			<GradientStopCollection >
+				<GradientStop Offset="0.0" Color="SkyBlue" />
+				<GradientStop Offset="1.0" Color="White" />
+			</GradientStopCollection>
+		</LinearGradientBrush>
+		<LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1" x:Key="AtomicBackgroundBlue">
+			<GradientStopCollection >
+				<GradientStop Offset="0.0" Color="DarkBlue" />
+				<GradientStop Offset="1.0" Color="Blue" />
+			</GradientStopCollection>
+		</LinearGradientBrush>
+		<LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1" x:Key="AtomicBackgroundGreen">
+			<GradientStopCollection >
+				<GradientStop Offset="0.0" Color="DarkGreen" />
+				<GradientStop Offset="1.0" Color="Green" />
+			</GradientStopCollection>
+		</LinearGradientBrush>
+		<LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1" x:Key="AtomicBackgroundRed">
+			<GradientStopCollection >
+				<GradientStop Offset="0.0" Color="DarkRed" />
+				<GradientStop Offset="1.0" Color="Red" />
+			</GradientStopCollection>
+		</LinearGradientBrush>
+		<LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1" x:Key="AtomicBackgroundOrange">
+			<GradientStopCollection >
+				<GradientStop Offset="0.0" Color="DarkOrange" />
+				<GradientStop Offset="1.0" Color="Orange" />
+			</GradientStopCollection>
+		</LinearGradientBrush>
+	</Window.Resources>
+	
+	<ListBox HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Background="Transparent" BorderBrush="Transparent" ItemsSource="{Binding}">
+		<ListBox.ItemsPanel>
+			<ItemsPanelTemplate>
+				<Grid Margin="4" ShowGridLines="False">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+				</Grid>
+			</ItemsPanelTemplate>
+		</ListBox.ItemsPanel>
+		<ListBox.ItemContainerStyle>
+			<Style TargetType="ListBoxItem">
+				<Setter Property="Margin" Value="2" />
+				<Setter Property="Grid.Column" Value="{Binding Path=Group}" />
+				<Setter Property="Grid.Row" Value="{Binding Path=Period}" />
+  		</Style>
+		</ListBox.ItemContainerStyle>
+		<ListBox.ItemTemplate>
+			<DataTemplate>
+				<DataTemplate.Resources>
+					<Style TargetType="Label">
+						<Setter Property="FontSize" Value="18" />
+						<Setter Property="FontWeight" Value="Bold" />
+						<Setter Property="VerticalContentAlignment" Value="Stretch" />
+						<Setter Property="HorizontalContentAlignment" Value="Stretch" />
+						<Setter Property="HorizontalAlignment" Value="Stretch" />
+						<Setter Property="VerticalAlignment" Value="Stretch" />
+						<Setter Property="Foreground" Value="{StaticResource AtomicForeground}" />						
+						<Setter Property="Background" Value="{StaticResource AtomicBackgroundBlue}" />
+					</Style>
+				</DataTemplate.Resources>
+				<Border CornerRadius="2" BorderThickness="2" BorderBrush="Black">
+					<Label
+            Content="{Binding Path=Symbol}"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+          />
+				</Border>
+			</DataTemplate>
+		</ListBox.ItemTemplate>
+	</ListBox>
+</Window>
