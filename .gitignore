@@ -1,0 +1,88 @@
+## Build results
+bin/
+obj/
+[Ll]og/
+*.log
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.vsp
+*.vspx
+*.pdb
+
+## Visual Studio Code
+.vscode/
+.history/
+
+## Rider
+.idea/
+
+## ASP.NET
+wwwroot/
+project.lock.json
+project.fragment.lock.json
+
+## dotCover
+*.dotCover
+
+## NCrunch
+*.ncrunch*
+.*crunch*.local.xml
+
+## Resharper
+_ReSharper*/
+*.ReSharper
+*.DotSettings.user
+
+## dotnet CLI
+project.assets.json
+project.nuget.cache
+artifacts/
+
+## NuGet
+packages/
+.nuget/
+*.nupkg
+*.snupkg
+
+## Entity Framework
+migrations/
+
+## JetBrains Rider
+.idea/
+.idea_modules/
+
+## Logs and diagnostics
+*.log
+*.vspscc
+*.vssscc
+*.pidb
+*.svclog
+
+## Coverage
+coverage/
+TestResults/
+*.coverage
+*.coveragexml
+
+## VS Solution folders
+.vs/
+
+## Misc
+*.db
+*.bak
+*.backup
+*.orig
+
+## Local secrets and config
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+## Mac/Linux cruft
+.DS_Store
+Thumbs.db
