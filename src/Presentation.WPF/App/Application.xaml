@@ -1,0 +1,55 @@
+<Application
+  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:v="clr-namespace:SJB.Science.PeriodicTable.View"
+  x:Class="SJB.Science.PeriodicTable.App"
+  >
+  <Application.Resources>
+		<LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1" x:Key="AtomicForeground">
+			<GradientStopCollection >
+				<GradientStop Offset="0.0" Color="SkyBlue" />
+				<GradientStop Offset="1.0" Color="White" />
+			</GradientStopCollection>
+		</LinearGradientBrush>
+		<LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1" x:Key="AtomicBackgroundBlue">
+			<GradientStopCollection >
+				<GradientStop Offset="0.0" Color="DarkBlue" />
+				<GradientStop Offset="1.0" Color="Blue" />
+			</GradientStopCollection>
+		</LinearGradientBrush>
+		<LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1" x:Key="AtomicBackgroundGreen">
+			<GradientStopCollection >
+				<GradientStop Offset="0.0" Color="DarkGreen" />
+				<GradientStop Offset="1.0" Color="Green" />
+			</GradientStopCollection>
+		</LinearGradientBrush>
+		<LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1" x:Key="AtomicBackgroundRed">
+			<GradientStopCollection >
+				<GradientStop Offset="0.0" Color="DarkRed" />
+				<GradientStop Offset="1.0" Color="Red" />
+			</GradientStopCollection>
+		</LinearGradientBrush>
+		<LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1" x:Key="AtomicBackgroundOrange">
+			<GradientStopCollection >
+				<GradientStop Offset="0.0" Color="DarkOrange" />
+				<GradientStop Offset="1.0" Color="Orange" />
+			</GradientStopCollection>
+		</LinearGradientBrush>
+		<!--<Style TargetType="ListBoxItem" x:Key="ElementControlStyleBlue">
+			<Setter Property="Background" Value="{StaticResource AtomicBackgroundBlue}" />
+			<Setter Property="Foreground" Value="{StaticResource AtomicForeground}" />
+		</Style>
+		<Style TargetType="ListBoxItem" x:Key="ElementControlStyleGreen">
+			<Setter Property="Background" Value="{StaticResource AtomicBackgroundGreen}" />
+			<Setter Property="Foreground" Value="{StaticResource AtomicForeground}" />
+		</Style>
+		<Style TargetType="ListBoxItem" x:Key="ElementControlStyleRed">
+			<Setter Property="Background" Value="{StaticResource AtomicBackgroundRed}" />
+			<Setter Property="Foreground" Value="{StaticResource AtomicForeground}" />
+		</Style>
+		<Style TargetType="ListBoxItem" x:Key="ElementControlStyleOrange">
+			<Setter Property="Background" Value="{StaticResource AtomicBackgroundOrange}" />
+			<Setter Property="Foreground" Value="{StaticResource AtomicForeground}" />
+		</Style>-->
+	</Application.Resources>	
+</Application>
